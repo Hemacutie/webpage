@@ -39,27 +39,33 @@ impactful solutions.
     <li>Blood Donation & Availability Finder</li>
     <li>AI-Powered Resume Builder</li>
     </ul>
-    <h2>Contact Me, I'll Reach You Soon...</h2><br><br>
-    <form id="form1">
-        <label for="fname">First name:</label>
-        <input type="text" id="fname" name="fname">
-        <label for="lname">Last name:</label>
-        <input type="text" id="lname" name="lname"><br><br>
-        <label for="mailid">Mail ID:</label>
-        <input type="text" id="mailid" name="lname"><br><br>
-        <input type="checkbox" id="consent" name="consent" value="Accepted">
-        <label for="consent"> I Agree to share the filled information with this website holder and use it for any
-            research purposes.</label><br>
-    </form>
-    <br>
-    <br>
-    <button type="submit" form="form1" value="Submit">Submit</button>
-</div>
-<script src="script.js"></script>
+    <div class="container">
+        <h2>Get in Touch – I'll Respond Soon!</h2>
+        <form id="contactForm">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname">
+            <span class="error" id="fnameError"></span>
+
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname">
+            <span class="error" id="lnameError"></span>
+
+            <label for="email">Mail ID:</label>
+            <input type="email" id="email" name="email">
+            <span class="error" id="emailError"></span>
+
+            <input type="checkbox" id="consent" name="consent">
+            <label for="consent"> I agree to share my information for research purposes.</label>
+            <span class="error" id="consentError"></span>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+
 </body>
-</html>  
-
-
+</html>
 
     
 
