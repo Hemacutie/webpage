@@ -1,34 +1,39 @@
-document.getElementById("form1").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent default form submission
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    let isValid = true;
+    const fname = document.getElementById("fname").value.trim();
+    const lname = document.getElementById("lname").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const consent = document.getElementById("consent").checked;
 
-    let fname = document.getElementById("fname").value.trim();
-    let lname = document.getElementById("lname").value.trim();
-    let mailid = document.getElementById("mailid").value.trim();
-    let consent = document.getElementById("consent").checked;
+    document.getElementById("fnameError").innerText = "";
+    document.getElementById("lnameError").innerText = "";
+    document.getElementById("emailError").innerText = "";
+    document.getElementById("consentError").innerText = "";
 
-    if (fname === "" || lname === "" || mailid === "") {
-        alert("Please fill in all fields.");
-        return;
+    if (fname === "") {
+        document.getElementById("fnameError").innerText = "First name is required.";
+        isValid = false;
     }
-
-    if (!validateEmail(mailid)) {
-        alert("Please enter a valid email address.");
-        return;
+    if (lname === "") {
+        document.getElementById("lnameError").innerText = "Last name is required.";
+        isValid = false;
     }
-
+    if (email === "") {
+        document.getElementById("emailError").innerText = "Email is required.";
+        isValid = false;
+    } else if (!email.includes("@") || !email.includes(".")) {
+        document.getElementById("emailError").innerText = "Enter a valid email.";
+        isValid = false;
+    }
     if (!consent) {
-        alert("You must agree to the terms before submitting.");
-        return;
+        document.getElementById("consentError").innerText = "You must agree to the terms.";
+        isValid = false;
     }
 
-    alert("Form submitted successfully!\nName: " + fname + " " + lname + "\nEmail: " + mailid);
-    document.getElementById("form1").reset(); // Reset form after submission
+    if (isValid) {
+        alert("Form submitted successfully!");
+        document.getElementById("contactForm").reset();
+    }
 });
-
-function validateEmail(email) {
-    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailPattern.test(email);
-}
-function toggleTheme() {
-    document.body.classList.toggle("dark-theme");
-}
