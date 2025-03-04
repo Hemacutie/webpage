@@ -1,66 +1,160 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color:white;
-    text-align: center;
-    padding: 20px;
-}
-
-.container {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 350px;
-    margin: auto;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; 
     color: #333;
+    line-height: 1.6;
+    text-align: center; 
 }
 
-label {
-    display: block;
+.h1 {
+    color: #007bff; 
+    margin-top: 2rem;
+}
+
+.cointainer {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
-    margin-top: 10px;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.text {
+    margin-top: 1rem;
+}
+
+.text p {
+    margin-bottom: 1rem;
+}
+
+.text a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.text a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+li {
+    background-color: #e9ecef;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    text-align: center; 
+}
+
+.portfolio {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.portfolio .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.portfolio h2 {
+    color: #007bff;
+    margin-bottom: 1.5rem;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.project {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.project h3 {
+    color: #007bff;
+    margin-bottom: 0.75rem;
+}
+
+.container form {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.container label {
+    display: block;
+    margin-bottom: 0.5rem;
     font-weight: bold;
 }
 
-input[type="text"], input[type="email"] {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
+.container input[type="text"],
+.container input[type="email"] {
+    width: calc(100% - 22px);
+    padding: 0.75rem;
+    margin-bottom: 1rem;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
-input[type="checkbox"] {
-    margin-top: 15px;
+.container input[type="checkbox"] {
+    margin-right: 0.5rem;
 }
 
-button {
-    background-color: #28a745;
-    color: white;
+.container button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
     border: none;
-    padding: 10px;
-    width: 100%;
-    margin-top: 15px;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;
+    margin-top: 1rem;
 }
 
-button:hover {
-    background-color: #218838;
+.container button:hover {
+    background-color: #0056b3;
 }
 
 .error {
     color: red;
-    font-size: 12px;
-    text-align: left;
+    display: block;
+    margin-top: 0.25rem;
 }
-img{
-    border-radius:50%;
-    vertical-align:middle;
-    height:200px;
-    width:200px;
+.project:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
+    transition: all 0.2s ease; 
+}
+body {
+    background: linear-gradient(to bottom, #f8f9fa, #e9ecef); /* Light grey gradient */
+}
+.portfolio {
+    background: linear-gradient(to right, #e0f7fa, #e0f2f7); /* Teal to light teal gradient */
 }
